@@ -8,6 +8,9 @@ from file import get_index_path, get_index_name_from_file_name, check_index_file
 
 app = Flask(__name__)
 
+@app.route('/', methods=['GET'])
+def index():
+    return 'Chat with resume file'
 
 @app.route('/upload', methods=['POST'])
 def upload_file():
